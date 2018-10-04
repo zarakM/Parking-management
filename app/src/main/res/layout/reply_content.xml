@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_marginLeft="2dp"
+android:layout_marginTop="2dp"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:id="@+id/holdtoreply"
+android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/decorated"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/head"
+        android:textColor="#000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="9dp"
+        android:padding="2dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/desc"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reply" />
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:textColor="#000"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.53" />
+
+    <TextView
+        android:id="@+id/dreply"
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:layout_marginBottom="7dp"
+        android:textColor="#000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/vlinear"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desc" />
+</LinearLayout>
+<LinearLayout
+    android:id="@+id/vlinear"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="1dp"
+    android:background="@drawable/decorated"
+    android:animateLayoutChanges="true"
+    android:visibility="visible"
+    android:orientation="horizontal"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/dreply"
+    >
+    <EditText
+        android:id="@+id/replies"
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:textColor="#000"
+        android:animateLayoutChanges="true"
+        android:hint="Reply" />
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:text="send" />
+</LinearLayout>
+</LinearLayout>
